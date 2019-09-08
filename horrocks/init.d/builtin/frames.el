@@ -29,4 +29,4 @@
  ;; tool-bar-style
  )
 
-(set-scroll-bar-mode nil)
+(and (fboundp 'set-scroll-bar-mode) (set-scroll-bar-mode nil))
