@@ -30,4 +30,5 @@
      (define-key term-mode-map (kbd "C-x C-x") 'term-char-mode)
 
      (term-set-escape-char ?\C-x)
+     (define-key term-raw-map (kbd "C-x C-j") nil)
      (define-key term-raw-map (kbd "C-x C-x") 'term-line-mode)))
