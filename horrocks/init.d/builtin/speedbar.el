@@ -47,6 +47,7 @@
  )
 
 (use-package speedbar
+  :commands (speedbar-add-supported-extension)
   :bind (:map speedbar-mode-map
               ("1" . digit-argument)
               ("2" . digit-argument)
