@@ -9,7 +9,7 @@
  ;; org-startup-folded
  ;; org-startup-truncated
  ;; org-startup-with-beamer-mode
- org-startup-with-inline-images t
+ ;; org-startup-with-inline-images
  ;; org-startup-with-latex-preview
  ;; org-use-extra-keys
  ;; org-use-sub-superscripts
