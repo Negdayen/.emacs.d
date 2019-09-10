@@ -3,8 +3,6 @@
 
   :init
   (setq
-   ;; Default to closed code blocks
-   org-hide-block-startup 'hideblocks
    ;; Enable code block fontification by its mode
    org-src-fontify-natively t
    ;; Enable code black indenting by its mode
