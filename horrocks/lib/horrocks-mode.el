@@ -12,6 +12,11 @@
   :keymap (list ;; (cons (kbd "C-r") 'hydra-repeat)
                 ;; (windmove-default-keybindings 'meta) TODO
                 (cons (kbd "C-c h") 'help)
+                (cons (kbd "C-c j c") 'avy-goto-char)
+                (cons (kbd "C-c j i") 'avy-goto-char-in-line)
+                (cons (kbd "C-c j l") 'avy-goto-line)
+                (cons (kbd "C-c j w") 'avy-goto-word-0)
+                (cons (kbd "C-c j y") 'avy-goto-symbol-1)
                 (cons (kbd "C-c o") 'hydra-outline/body)
                 (cons (kbd "C-c p") 'hydra-projectile/body)
                 (cons (kbd "C-c w") 'windows/workspace)
