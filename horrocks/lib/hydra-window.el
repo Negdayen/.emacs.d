@@ -51,7 +51,7 @@
   ("l" windmove-right)
 
   ("o" other-window)
-  ("O" window/back)
+  ("O" other-window/back)
 
   ("-" split-window-below)
   ("|" split-window-right)
