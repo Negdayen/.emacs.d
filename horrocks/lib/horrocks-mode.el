@@ -3,7 +3,10 @@
   :global t
   :keymap (list
            ;; (cons (kbd "C-r") 'hydra-repeat)
-           ;; (windmove-default-keybindings 'meta) TODO
+           (cons (kbd "<C-up>") 'windmove-up)
+           (cons (kbd "<C-down>") 'windmove-down)
+           (cons (kbd "<C-left>") 'windmove-left)
+           (cons (kbd "<C-right>") 'windmove-right)
            (cons (kbd "C-c h a") 'hydra-apropos/body)
            (cons (kbd "C-c j c") 'avy-goto-char)
            (cons (kbd "C-c j i") 'avy-goto-char-in-line)
