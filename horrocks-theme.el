@@ -16,10 +16,7 @@
 (custom-theme-set-faces
  'horrocks
  '(button ((t (:inherit (link)))))
- '(cursor ((((type graphic))
-            (:background "#0000ffffffff"))
-           (((type tty) (min-colors 256))
-            (:background "brightcyan"))))
+ '(cursor ((t (:background "#0000ffffffff"))))
  '(default ((((type graphic))
              (:background "#080808080808"
               :foreground "#6c6c6c6c6c6c"))
