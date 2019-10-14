@@ -5,7 +5,9 @@
 
 (customize-setq
  ;; display-buffer-alist
- ;; display-buffer-base-action
+ display-buffer-base-action (cons (list #'display-buffer-reuse-window
+                                        #'display-buffer-same-window)
+                                  (list))
  ;; display-buffer-function
  ;; display-buffer-reuse-frames
  ;; even-window-sizes
