@@ -11,7 +11,8 @@
       (dolist (hsplit hsplits)
         (split-window-horizontally)
         (balance-windows))
-      (select-window (window-in-direction 'below)))))
+      (when (window-in-direction 'below)
+        (select-window (window-in-direction 'below))))))
 
 (defun layout/inverted-thong ()
   (interactive)
