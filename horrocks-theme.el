@@ -88,6 +88,7 @@
  '(mode-line-highlight ((t (:inherit (highlight)))))
  '(mode-line-inactive ((t (:background "black" :foreground "grey10"))))
  '(next-error ((t (:inherit (region)))))
+ '(org-block ((t (:inherit default))))
  '(query-replace ((t (:inherit (isearch)))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "grey20"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "grey30"))))
