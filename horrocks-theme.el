@@ -1,3 +1,5 @@
+(require 'color-x)
+
 (deftheme horrocks "A minimal tty-first theme with semantic colors.")
 
 (defconst color--bubblegum "#ffff8787d7d7")
@@ -13,19 +15,52 @@
 (defconst color--serpentine "#8787d7d70000")
 (defconst color--vanilla "lightyellow")
 
+(defconst horrocks-theme--default-bg (color-name-to-hsl "#070707"))
+(defconst horrocks-theme--default-fg (color-name-to-hsl "#707070"))
+(defconst horrocks-theme--mode-line-bg (light+ horrocks-theme--default-bg .05))
+(defconst horrocks-theme--mode-line-fg (light+ horrocks-theme--mode-line-bg .15))
+(defconst horrocks-theme--mode-line-inactive-bg (color-name-to-hsl "black"))
+(defconst horrocks-theme--mode-line-inactive-fg
+  (light+ horrocks-theme--mode-line-inactive-bg .15))
+(defconst horrocks-theme--org-block-begin-line
+  (light+ horrocks-theme--default-bg .15))
+
+(defconst horrocks-theme--org-level-1 (list 0 .75 .75))
+(defconst horrocks-theme--org-level-2 (hue+ horrocks-theme--org-level-1 .125))
+(defconst horrocks-theme--org-level-3 (hue+ horrocks-theme--org-level-2 .125))
+(defconst horrocks-theme--org-level-4 (hue+ horrocks-theme--org-level-3 .125))
+(defconst horrocks-theme--org-level-5 (hue+ horrocks-theme--org-level-4 .125))
+(defconst horrocks-theme--org-level-6 (hue+ horrocks-theme--org-level-5 .125))
+(defconst horrocks-theme--org-level-7 (hue+ horrocks-theme--org-level-6 .125))
+(defconst horrocks-theme--org-level-8 (hue+ horrocks-theme--org-level-7 .125))
+
+(defconst horrocks-theme--rainbow-delimiters-depth-1-face (list 0 0 .2))
+(defconst horrocks-theme--rainbow-delimiters-depth-2-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-1-face .1))
+(defconst horrocks-theme--rainbow-delimiters-depth-3-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-2-face .1))
+(defconst horrocks-theme--rainbow-delimiters-depth-4-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-3-face .1))
+(defconst horrocks-theme--rainbow-delimiters-depth-5-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-4-face .1))
+(defconst horrocks-theme--rainbow-delimiters-depth-6-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-5-face .1))
+(defconst horrocks-theme--rainbow-delimiters-depth-7-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-6-face .1))
+(defconst horrocks-theme--rainbow-delimiters-depth-8-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-7-face .1))
+(defconst horrocks-theme--rainbow-delimiters-depth-9-face
+  (light+ horrocks-theme--rainbow-delimiters-depth-8-face .1))
+
 (custom-theme-set-faces
  'horrocks
  '(button ((t (:inherit (link)))))
  '(cursor ((t (:background "#0000ffffffff"))))
- '(default ((((type graphic))
-             (:background "#080808080808"
-              :foreground "#6c6c6c6c6c6c"))
-            (((type tty) (min-colors 256))
-             (:background "grey5"
-              :foreground "grey45"))))
+ `(default ((t (:background ,(hsl-to-hex horrocks-theme--default-bg)
+                :foreground ,(hsl-to-hex horrocks-theme--default-fg)))))
  '(diff-added ((t (:background "#335533" :foreground "black"))))
  ;; '(diff-changed ((t (:background "" :foreground ""))))
- '(diff-context ((t (:foreground "cornsilk"))))
+ '(diff-context ((t (:inherit default))))
  '(diff-file-header ((t (:background "grey60" :foreground "black"))))
  '(diff-function ((t (:inherit diff-header))))
  '(diff-header ((t (:background "grey45" :foreground "black"))))
@@ -82,23 +117,37 @@
           (((type tty) (min-colors 256))
            (:background "color-82"))))
  '(minibuffer-prompt ((t (:inherit default))))
- '(mode-line ((t (:background "grey10" :foreground "grey25"))))
+ `(mode-line
+   ((t (:background ,(hsl-to-hex horrocks-theme--mode-line-bg)
+        :foreground ,(hsl-to-hex horrocks-theme--mode-line-fg)))))
  '(mode-line-buffer-id ((t nil)))
  '(mode-line-emphasis ((t (:weight bold))))
  '(mode-line-highlight ((t (:inherit (highlight)))))
- '(mode-line-inactive ((t (:background "black" :foreground "grey10"))))
+ `(mode-line-inactive
+   ((t (:background ,(hsl-to-hex horrocks-theme--mode-line-inactive-bg)
+        :foreground ,(hsl-to-hex horrocks-theme--mode-line-inactive-fg)))))
  '(next-error ((t (:inherit (region)))))
  '(org-block ((t (:inherit default))))
+ `(org-block-begin-line ((t (:foreground ,(hsl-to-hex horrocks-theme--org-block-begin-line)))))
+ '(org-block-end-line ((t (:inherit org-block-begin-line))))
+ `(org-level-1 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-1)))))
+ `(org-level-2 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-2)))))
+ `(org-level-3 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-3)))))
+ `(org-level-4 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-4)))))
+ `(org-level-5 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-5)))))
+ `(org-level-6 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-6)))))
+ `(org-level-7 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-7)))))
+ `(org-level-8 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-8)))))
  '(query-replace ((t (:inherit (isearch)))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "grey20"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "grey30"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "grey40"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "grey50"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "grey60"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "grey70"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "grey80"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "grey90"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "grey100"))))
+ `(rainbow-delimiters-depth-1-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-1-face)))))
+ `(rainbow-delimiters-depth-2-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-2-face)))))
+ `(rainbow-delimiters-depth-3-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-3-face)))))
+ `(rainbow-delimiters-depth-4-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-4-face)))))
+ `(rainbow-delimiters-depth-5-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-5-face)))))
+ `(rainbow-delimiters-depth-6-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-6-face)))))
+ `(rainbow-delimiters-depth-7-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-7-face)))))
+ `(rainbow-delimiters-depth-8-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-8-face)))))
+ `(rainbow-delimiters-depth-9-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-9-face)))))
  '(rainbow-delimiters-mismatched-face ((t (:inherit error))))
  '(rainbow-delimiters-unmatched-face ((t (:inherit error))))
  `(region ((t (:background ,color--deep-red))))
