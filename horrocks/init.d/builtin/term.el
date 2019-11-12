@@ -20,9 +20,6 @@
  ;; term-suppress-hard-newline
  )
 
-;; Start in term-line-mode.
-(advice-add 'term :after  (lambda (&rest ignored) (term-line-mode)))
-
 ;; Makes more sense than ?\C-c default.
 (eval-after-load 'term
   '(progn
