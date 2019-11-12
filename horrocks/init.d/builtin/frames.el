@@ -3,7 +3,6 @@
                        (font . "DejaVu Sans Mono-10")
                        (horizontal-scroll-bars . nil)
                        (left-fringe . 0)
-                       (line-spacing . .2)
                        (right-divider-width . 0)
                        (right-fringe . 0)
                        (vertical-scroll-bars . nil))
@@ -19,7 +18,7 @@
  ;; minibuffer-frame-alist
  ;; pop-up-frame-alist
  ;; pop-up-frame-function
- ;; scroll-bar-mode
+ scroll-bar-mode nil
  ;; special-display-buffer-names
  ;; special-display-frame-alist
  ;; special-display-function

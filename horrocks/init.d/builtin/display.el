@@ -9,7 +9,7 @@
  ;; inverse-video
  line-number-display-limit nil
  line-number-display-width 300
- line-spacing .2
+ ;; line-spacing
  mouse-autoselect-window t
  ;; no-redraw-on-reenter
  ;; overline-margin
