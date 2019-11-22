@@ -1,14 +1,16 @@
 (require 'color)
 
 (defun closest-available-color (color)
-  (caar
-   (sort
-    (mapcar
-     (lambda (available-color)
-       (cons (car available-color)
-             (color-distance (car available-color) color)))
-     (list-colors-duplicates))
-    (lambda (c1 c2) (< (cdr c1) (cdr c2))))))
+  (caar (closest-available-colors)))
+
+(defun closest-available-colors (color)
+  (sort
+   (mapcar
+    (lambda (available-color)
+      (cons (car available-color)
+            (color-distance (car available-color) color)))
+    (list-colors-duplicates))
+   (lambda (c1 c2) (< (cdr c1) (cdr c2)))))
 
 (defun color-name-to-hsl (color)
   (apply #'color-rgb-to-hsl (color-name-to-rgb color)))
