@@ -7,7 +7,9 @@
 (defconst color--dark-lilac "#5f5f0000ffff")
 (defconst color--deep-red "#5f5f00000000")
 (defconst color--dim-forest-green "#00005f5f0000")
+(defconst color--indigo (color-rgb-to-hex .149  .438  .71))
 (defconst color--key "#d7d7afaf0000")
+(defconst color--light-prune "#87875f5f8787")
 (defconst color--lilac "#87875f5fffff")
 (defconst color--dollar "#0000afaf5f5f")
 (defconst color--pink "#ffff5f5fffff")
@@ -55,6 +57,8 @@
 (custom-theme-set-faces
  'horrocks
  '(button ((t (:inherit (link)))))
+ `(comint-highlight-input ((t (:foreground ,color--indigo))))
+ `(comint-highlight-prompt ((t (:foreground ,color--light-prune))))
  '(cursor ((t (:background "#0000ffffffff"))))
  `(default ((t (:background ,(hsl-to-hex horrocks-theme--default-bg)
                 :foreground ,(hsl-to-hex horrocks-theme--default-fg)))))
@@ -138,6 +142,7 @@
  `(org-level-6 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-6)))))
  `(org-level-7 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-7)))))
  `(org-level-8 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-8)))))
+ '(org-verbatim ((t (:foreground "silver"))))
  '(query-replace ((t (:inherit (isearch)))))
  `(rainbow-delimiters-depth-1-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-1-face)))))
  `(rainbow-delimiters-depth-2-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-2-face)))))
