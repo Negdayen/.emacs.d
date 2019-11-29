@@ -189,6 +189,8 @@
  `(rcirc-server ((t (:foreground ,color--serpentine))))
  '(rcirc-timestamp ((t (:foreground "grey25"))))
  '(rcirc-url ((t (:inherit (link)))))
+ `(sh-escaped-newline ((t (:inherit default))))
+ `(sh-heredoc ((t (:foreground "grey60"))))
  '(shadow ((t (:foreground "grey20"))))
  `(show-paren-match ((t (:foreground ,color--purple :weight bold))))
  '(sp-pair-overlay-face ((t nil)))
