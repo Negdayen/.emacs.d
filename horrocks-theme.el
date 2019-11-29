@@ -113,7 +113,7 @@
            (:foreground "brightred"))))
  `(font-lock-builtin-face ((t (:foreground ,color--bubblegum))))
  '(font-lock-comment-delimiter-face ((t (:inherit (font-lock-comment-face)))))
- `(font-lock-comment-face ((t (:foreground ,color--cerulean))))
+ `(font-lock-comment-face ((t (:foreground ,color--cerulean-blue))))
  '(font-lock-constant-face ((t (:foreground "cyan"))))
  `(font-lock-doc-face ((t (:foreground ,color--dollar))))
  '(font-lock-function-name-face ((t (:foreground "forestgreen"))))
