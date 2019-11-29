@@ -24,8 +24,6 @@
 (defconst horrocks-theme--mode-line-inactive-bg (color-name-to-hsl "black"))
 (defconst horrocks-theme--mode-line-inactive-fg
   (light+ horrocks-theme--mode-line-inactive-bg .15))
-(defconst horrocks-theme--org-block-begin-line
-  (light+ horrocks-theme--default-bg .15))
 
 (defconst horrocks-theme--org-level-1 (list 0 .75 .75))
 (defconst horrocks-theme--org-level-2 (hue+ horrocks-theme--org-level-1 .125))
@@ -152,8 +150,10 @@
         :foreground ,(hsl-to-hex horrocks-theme--mode-line-inactive-fg)))))
  '(next-error ((t (:inherit (region)))))
  '(org-block ((t (:inherit default))))
- `(org-block-begin-line ((t (:foreground ,(hsl-to-hex horrocks-theme--org-block-begin-line)))))
- '(org-block-end-line ((t (:inherit org-block-begin-line))))
+ '(org-block-begin-line ((t (:inherit org-meta-line))))
+ '(org-block-end-line ((t (:inherit org-meta-line))))
+ '(org-document-info-keyword ((t (:inherit org-meta-line))))
+ '(org-meta-line ((t (:foreground "magenta"))))
  `(org-level-1 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-1)))))
  `(org-level-2 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-2)))))
  `(org-level-3 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-3)))))
