@@ -53,8 +53,8 @@
   (show-smartparens-global-mode 1)
   (smartparens-global-mode)
   :config
-  (sp-with-modes sp-lisp-modes
-    (sp-local-pair "'" nil :actions nil))
+  (sp-local-pair sp-lisp-modes "`" "`" :actions nil)
+
   ;; (sp-with-modes '(html-mode sgml-mode) (sp-local-pair "<" ">"))
   ;; (setq
   ;;  sp-highlight-pair-overlay nil
