@@ -1,5 +1,5 @@
 (customize-setq
- ;; electric-indent-mode
+ electric-indent-mode nil
  ;; electric-layout-mode
  ;; electric-pair-delete-adjacent-pairs
  ;; electric-pair-inhibit-predicate
