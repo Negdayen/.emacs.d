@@ -23,3 +23,10 @@
  ;; clipboard-kill-ring-save
  ;; clipboard-yank
  )
+
+;; MSYS2 /dev/clipboard integration
+(when (and (eq system-type 'cygwin) (file-exists-p "/dev/clipboard"))
+  (advice-add 'kill-new
+              :before
+              (lambda (string &optional replace)
+                (with-temp-file "/dev/clipboard" (insert string)))))
