@@ -6,5 +6,8 @@
  ;; image-load-path
  ;; image-scaling-factor
  imagemagick-enabled-types t
- ;; imagemagick-types-inhibit
 )
+
+;; imagemagick tries to treat c header files as images; no thanks.
+(add-to-list 'imagemagick-types-inhibit 'H)
+(imagemagick-register-types)
