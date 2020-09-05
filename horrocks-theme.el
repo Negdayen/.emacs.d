@@ -1,6 +1,6 @@
 (require 'color-x)
 
-(deftheme horrocks "A minimal tty-first theme with semantic colors.")
+(deftheme horrocks "A tty-first theme with semantic colors.")
 
 (defconst color--blue (color-rgb-to-hex .01 .28 1))
 (defconst color--blue-ncs (color-rgb-to-hex 0 .55 .78))
@@ -142,6 +142,7 @@
  '(lazy-highlight ((t (:background "yellow" :foreground "black"))))
  `(link ((t (:foreground ,color--lilac :underline t))))
  `(link-visited ((t (:inherit link :foreground ,color--dark-lilac))))
+ '(magit-section-highlight ((t (:background "grey10"))))
  '(match ((default (:foreground "black"))
           (((type graphic))
            (:background "#5f5fffff0000"))
