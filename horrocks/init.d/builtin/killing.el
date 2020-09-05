@@ -1,6 +1,6 @@
 (customize-setq
  ;; backward-delete-char-untabify-method
- delete-active-region 'kill
+ delete-active-region t
  ;; kill-append-merge-undo
  kill-do-not-save-duplicates t
  kill-read-only-ok t

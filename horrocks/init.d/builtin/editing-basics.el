@@ -1,7 +1,7 @@
 (customize-setq
  ;; change-major-mode-with-file-name
  delete-selection-mode t
- global-mark-ring-max 20
+ global-mark-ring-max 32
  ;; goal-column
  ;; line-move-ignore-invisible
  line-move-visual t
@@ -19,7 +19,7 @@
  ;; show-trailing-whitespace nil ;this is handled by whitespace-mode
  tab-width 4
  track-eol nil
- ;; transient-mark-mode
+ transient-mark-mode nil
  use-empty-active-region nil
  ;; words-include-escapes
  )
