@@ -1,0 +1,8 @@
+* Trouble Installing?
+
+Couldn't download anything from GNU archive.
+https://elpa.gnu.org/packages/gnu-elpa-keyring-update.html
+
+#+BEGIN_SRC sh
+gpg2 --homedir ~/.enacs.d/elpa/gnupg --receive-keys <key>
+#+END_SRC
