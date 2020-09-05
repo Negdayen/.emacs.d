@@ -32,7 +32,6 @@
            (cons (kbd "C-c w l T") 'layout/inverted-thong)
            (cons (kbd "C-c w w") 'hydra-window/body)
            (cons (kbd "C-x O") 'other-window/back)
-           (cons (kbd "C-x C-b") 'buffer-menu)
            (cons (kbd "C-z") nil)
            (cons (kbd "M-m M-m") 'hydra-sp/body)
            ;; (cons (kbd "M-F") 'hydra-find/body)

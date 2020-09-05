@@ -1,0 +1,52 @@
+(customize-setq 
+ ;; ibuffer-always-compile-formats
+ ;; ibuffer-always-show-last-buffer
+ ;; ibuffer-always-show-predicates
+ ;; ibuffer-case-fold-search
+ ;; ibuffer-compressed-file-name-regexp
+ ;; ibuffer-default-directory
+ ;; ibuffer-default-display-maybe-show-predicates
+ ;; ibuffer-default-shrink-to-minimum-size
+ ;; ibuffer-default-sorting-mode
+ ;; ibuffer-default-sorting-reversep
+ ;; ibuffer-deletion-char
+ ;; ibuffer-deletion-face
+ ;; ibuffer-directory-abbrev-alist
+ ;; ibuffer-display-summary
+ ;; ibuffer-elide-long-columns
+ ;; ibuffer-eliding-string
+ ;; ibuffer-expert
+ ;; ibuffer-filter-format-alist
+ ;; ibuffer-filter-group-name-face
+ ;; ibuffer-fontification-alist
+ ;; ibuffer-formats
+ ;; ibuffer-help-buffer-modes
+ ;; ibuffer-hook
+ ;; ibuffer-jump-offer-only-visible-buffers
+ ;; ibuffer-load-hook
+ ;; ibuffer-locked-buffer-face
+ ;; ibuffer-locked-char
+ ;; ibuffer-marked-char
+ ;; ibuffer-marked-face
+ ;; ibuffer-maybe-show-predicates
+ ;; ibuffer-mode-hook
+ ;; ibuffer-modified-char
+ ;; ibuffer-movement-cycle
+ ;; ibuffer-never-search-content-mode
+ ;; ibuffer-never-search-content-name
+ ;; ibuffer-never-show-predicates
+ ;; ibuffer-old-time
+ ;; ibuffer-read-only-char
+ ;; ibuffer-save-with-custom
+ ;; ibuffer-saved-filter-groups
+ ;; ibuffer-saved-filters
+ ;; ibuffer-show-empty-filter-groups
+ ;; ibuffer-title-face
+ ;; ibuffer-truncate-lines
+ ;; ibuffer-use-header-line
+ ;; ibuffer-use-other-window
+ ;; ibuffer-view-ibuffer
+ )
+
+(with-eval-after-load "ibuffer"
+  (add-hook 'ibuffer-mode-hook 'ibuffer-auto-mode))
