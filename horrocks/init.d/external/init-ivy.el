@@ -1,6 +1,7 @@
 (use-package ivy)
 (use-package ivy-hydra)
 
+(bind-key "M-." 'ivy-toggle-mark ivy-minibuffer-map)
 (bind-key "M-n" 'ivy-restrict-to-matches ivy-minibuffer-map)
 
 (with-eval-after-load 'ivy
