@@ -23,4 +23,5 @@
 (load-directory (relative "horrocks/lib"))
 (load-directory (relative "horrocks/init.d/internal"))
 (load-directory (relative "horrocks/init.d/lang"))
+(load-directory (relative "third-party"))
 (load (relative "horrocks/global-key-bindings.el"))
