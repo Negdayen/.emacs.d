@@ -34,14 +34,14 @@
 (defconst horrocks-theme--mode-line-inactive-fg
   (light+ horrocks-theme--mode-line-inactive-bg .15))
 
-(defconst horrocks-theme--org-level-1 (list 0 .75 .75))
-(defconst horrocks-theme--org-level-2 (hue+ horrocks-theme--org-level-1 .125))
-(defconst horrocks-theme--org-level-3 (hue+ horrocks-theme--org-level-2 .125))
-(defconst horrocks-theme--org-level-4 (hue+ horrocks-theme--org-level-3 .125))
-(defconst horrocks-theme--org-level-5 (hue+ horrocks-theme--org-level-4 .125))
-(defconst horrocks-theme--org-level-6 (hue+ horrocks-theme--org-level-5 .125))
-(defconst horrocks-theme--org-level-7 (hue+ horrocks-theme--org-level-6 .125))
-(defconst horrocks-theme--org-level-8 (hue+ horrocks-theme--org-level-7 .125))
+(defconst horrocks-theme--org-level-1 (list .625 .75 .75))
+(defconst horrocks-theme--org-level-2 (hue+ horrocks-theme--org-level-1 .625))
+(defconst horrocks-theme--org-level-3 (hue+ horrocks-theme--org-level-2 .625))
+(defconst horrocks-theme--org-level-4 (hue+ horrocks-theme--org-level-3 .625))
+(defconst horrocks-theme--org-level-5 (hue+ horrocks-theme--org-level-4 .625))
+(defconst horrocks-theme--org-level-6 (hue+ horrocks-theme--org-level-5 .625))
+(defconst horrocks-theme--org-level-7 (hue+ horrocks-theme--org-level-6 .625))
+(defconst horrocks-theme--org-level-8 (hue+ horrocks-theme--org-level-7 .625))
 
 (setq rainbow-delimiters-max-face-count 8)
 (defconst horrocks-theme--rainbow-delimiters-depth-1-face (list 0 .2 .5))
