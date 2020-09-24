@@ -6,7 +6,7 @@
  ;; line-move-ignore-invisible
  line-move-visual t
  mark-even-if-inactive nil
- mark-ring-max 20
+ mark-ring-max 32
  mode-require-final-newline 'visit-save
  next-line-add-newlines nil
  ;; normal-erase-is-backspace
