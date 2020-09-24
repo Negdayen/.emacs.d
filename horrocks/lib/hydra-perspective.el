@@ -17,12 +17,12 @@ Perspective: [_j_ump] [_n_ext] [_p_revious] [_l_ast]
 
   ("b" persp-ibuffer nil :exit t)
   ("i" persp-import)
-  ("j" persp-switch-quick)
-  ("l" persp-switch-last)
+  ("j" persp-switch-quick nil :exit t)
+  ("l" persp-switch-last nil :exit t)
   ("n" persp-next)
   ("o" other-window)
   ("p" persp-prev)
   ("r" persp-rename)
-  ("s" persp-switch)
+  ("s" persp-switch nil :exit t)
 
   ("K" persp-kill))
