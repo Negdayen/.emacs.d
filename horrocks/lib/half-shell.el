@@ -11,6 +11,12 @@ to the current buffer."
      (shell-command-to-string
       (format "%s | tr '\n' ' ' | sed 's| $||'" command)))))
 
+(defun yank-shell-command (command)
+  (interactive "MShell command: \n")
+  (kill-new
+   (shell-command-to-string
+    (format "%s | tr '\n' ' ' | sed 's| $||'" command))))
+
 (defmacro defsh (name command)
   "Define wrapper interactive function NAME executing shell COMMAND on region."
   `(defun ,name (start end)
