@@ -1,3 +1,11 @@
+(defun copy-buffer-file-name ()
+  (interactive)
+  (kill-new (buffer-file-name)))
+
+(defun copy-buffer-name ()
+  (interactive)
+  (kill-new (buffer-name)))
+
 (defun back-to-indentation* ()
   "Move point to identation if not already there, else to beginning of line."
   (interactive)
