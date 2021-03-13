@@ -1,5 +1,6 @@
 (customize-setq
  org-babel-load-languages '((emacs-lisp  . t)
+                            (dot . t)
                             (python . t)
                             (shell . t)
                             (sql . t)
