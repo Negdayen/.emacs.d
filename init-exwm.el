@@ -15,9 +15,25 @@
 
 (customize-setq
  exwm-input-global-keys
- `(
-   ([?\s-r] . exwm-reset) ;super-r to exit char-mode and fullscreen-mode.
+ `(([?\s-r] . exwm-reset) ;super-r to exit char-mode and fullscreen-mode.
    ([?\s-w] . exwm-workspace-switch)
+   ([?\s-x] . (lambda () (interactive) (shell-command "dmenu_run")))
+
+   ([s-return] . (lambda ()
+                   (interactive)
+                   (start-process-shell-command "st" nil "st")))
+
+   ([?\s-Z] . (lambda () (interactive) (shell-command "sudo ZZZ")))
+
+
+   ([?\s-d ?\s-i] . (lambda ()
+                      "Invert X display's colors"
+                      (interactive)
+                      (shell-command "xcalib -i -a")))
+   ([?\s-d ?\s-t] . (lambda ()
+                      "Display current time and date."
+                      (interactive)
+                      (shell-command "date +'%T %Z %A %B %-d %Y' | dmenu")))
 
    ;;super-0 to super-9 to switch to a workspace by its index.
    ,@(mapcar (lambda (i)
