@@ -2,6 +2,7 @@
 (add-to-list 'package-selected-packages 'exwm)
 (package-refresh-contents)
 (package-install-selected-packages)
+(require 'exwm)
 
 
 
