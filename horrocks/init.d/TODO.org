@@ -3,9 +3,6 @@
 ;;;;; TODO Lisp Libraries
 ;;;;; TODO Lisp Eval
 
-;;;; TODO Saving
-;;;;; TODO Backup
-;;;;; TODO Customize Save
 ;;;; TODO Remote Files
 ;;;; TODO File Name Cache
 
