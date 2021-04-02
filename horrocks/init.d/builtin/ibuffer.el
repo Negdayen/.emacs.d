@@ -1,4 +1,4 @@
-(customize-setq 
+(customize-setq
  ;; ibuffer-always-compile-formats
  ;; ibuffer-always-show-last-buffer
  ;; ibuffer-always-show-predicates
@@ -47,6 +47,3 @@
  ;; ibuffer-use-other-window
  ;; ibuffer-view-ibuffer
  )
-
-(with-eval-after-load "ibuffer"
-  (add-hook 'ibuffer-mode-hook 'ibuffer-auto-mode))
