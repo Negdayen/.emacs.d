@@ -1,2 +1,6 @@
+amx-items
+auto-save/
 auto-save-list/
+backup/
+customize.el
 elpa/
