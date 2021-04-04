@@ -1,4 +1,4 @@
-(defun sachachua--describe-random-interactive-function ()
+(defun describe-random-interactive-function ()
   "Show the documentation for a random interactive function.
 Consider only documented, non-obsolete functions."
   (interactive)

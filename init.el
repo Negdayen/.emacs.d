@@ -2,7 +2,7 @@
   "Return filepath relative to the currently loading file."
   (concat (file-name-directory load-file-name) filepath))
 
-(add-to-list 'load-path (relative "horrocks/lib"))
+(add-to-list 'load-path (relative "horrocks/package"))
 
 (cond
  ((daemonp) (add-hook 'after-make-frame-functions
@@ -14,14 +14,13 @@
                             (load-theme 'horrocks t))))))
  (t (add-hook 'window-setup-hook (lambda () (load-theme 'horrocks t)))))
 
-(load (relative "horrocks/lib/load-directory"))
-(load-directory (relative "horrocks/init.d/priority"))
-(load-directory (relative "horrocks/init.d/lib"))
-(load-directory (relative "horrocks/lib/batteries"))
-(load-directory (relative "horrocks/init.d/builtin"))
-(load-directory (relative "horrocks/init.d/external"))
-(load-directory (relative "horrocks/lib"))
-(load-directory (relative "horrocks/init.d/internal"))
-(load-directory (relative "horrocks/init.d/lang"))
-(load-directory (relative "third-party"))
-(load (relative "horrocks/global-key-bindings.el"))
+(load (relative "horrocks/package/load-directory"))
+(load (relative "horrocks/package/batteries/batteries-core.el"))
+(load-directory (relative "horrocks/init/priority"))
+(load-directory (relative "horrocks/init/package"))
+(load-directory (relative "horrocks/package/batteries"))
+(load-directory (relative "horrocks/init/builtin"))
+(load-directory (relative "horrocks/init/package"))
+(load-directory (relative "horrocks/package"))
+(load-directory (relative "horrocks/init/major-mode"))
+(load-directory (relative "external/sachachua"))
