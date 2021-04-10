@@ -9,7 +9,7 @@
  ;; whitespace-global-modes
  ;; whitespace-hspace-regexp
  ;; whitespace-indentation-regexp
- ;; whitespace-line-column
+ whitespace-line-column nil
  ;; whitespace-space-after-tab-regexp
  ;; whitespace-space-before-tab-regexp
  ;; whitespace-space-regexp

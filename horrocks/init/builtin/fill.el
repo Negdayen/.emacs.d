@@ -7,11 +7,11 @@
  colon-double-space nil
  ;; default-justification
  ;; enable-kinsoku
- fill-column 80
+ fill-column 90
  ;; fill-individual-varying-indent
  ;; fill-nobreak-invisible
  ;; fill-nobreak-predicate
- fill-prefix nil
+ ;; fill-prefix nil
  ;; fill-separate-heterogeneous-words-with-space
  ;; left-margin
  sentence-end-double-space t
