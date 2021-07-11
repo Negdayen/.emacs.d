@@ -23,4 +23,4 @@
 (load-directory (relative "horrocks/init/package"))
 (load-directory (relative "horrocks/package"))
 (load-directory (relative "horrocks/init/major-mode"))
-(load-directory (relative "external/sachachua"))
+(load-directory (relative "extern/sachachua"))
