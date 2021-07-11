@@ -1,3 +1,18 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; My Customize Additions ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(customize-setq scheme-mit-dialect nil)
+(defcustom scheme-implementation 'gambit
+  "Specialize scheme-mode based on the value of this variable."
+  :group 'scheme
+  :safe (function symbolp)
+  :type 'symbol)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; General Scheme Configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (require 'bind-key)
 
 (add-to-list 'font-lock-maximum-decoration '(scheme-mode . 1))
