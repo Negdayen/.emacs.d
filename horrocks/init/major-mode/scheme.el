@@ -49,3 +49,61 @@
    'scheme-mode-hook
    (lambda ()
      (setq-local outline-regexp (rx ";; " (+ "*"))))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Gambit Scheme Polymodes ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define-hostmode poly-scheme-hostmode
+  :mode 'scheme-mode)
+
+(define-innermode poly-scheme-c-innermode
+  :mode 'c-mode
+  :head-matcher "^[^;]*#<<c$"
+  :tail-matcher "^c$"
+  :head-mode 'scheme-mode
+  :tail-mode 'scheme-mode)
+
+(define-innermode poly-scheme-c++-innermode
+  :mode 'c++-mode
+  :head-matcher "^[^;]*#<<c\\+\\+$"
+  :tail-matcher "^c\\+\\+$"
+  :head-mode 'scheme-mode
+  :tail-mode 'scheme-mode)
+
+(define-innermode poly-scheme-glsl-innermode
+  :mode 'glsl-mode
+  :head-matcher "^[^;]*#<<glsl$"
+  :tail-matcher "^glsl$"
+  :head-mode 'scheme-mode
+  :tail-mode 'scheme-mode)
+
+(define-innermode poly-scheme-js-innermode
+  :mode 'js-mode
+  :head-matcher "^[^;]*#<<js$"
+  :tail-matcher "^js$"
+  :head-mode 'scheme-mode
+  :tail-mode 'scheme-mode)
+
+(define-innermode poly-scheme-org-innermode
+  :mode 'org-mode
+  :head-matcher "^[^;]*#<<org$"
+  :tail-matcher "^org$"
+  :head-mode 'scheme-mode
+  :tail-mode 'scheme-mode)
+
+(define-innermode poly-scheme-python-innermode
+  :mode 'python-mode
+  :head-matcher "^[^;]*#<<python$"
+  :tail-matcher "^python$"
+  :head-mode 'scheme-mode
+  :tail-mode 'scheme-mode)
+
+(define-polymode poly-scheme-mode
+  :hostmode 'poly-scheme-hostmode
+  :innermodes '(poly-scheme-c-innermode
+                poly-scheme-c++-innermode
+                poly-scheme-glsl-innermode
+                poly-scheme-js-innermode
+                poly-scheme-org-innermode
+                poly-scheme-python-innermode))
