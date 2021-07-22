@@ -1,6 +1,7 @@
 (defun relative-filepath (filepath)
-  "Return filepath relative to default-directory."
+  "Return path of FILEPATH relative to DEFAULT-DIRECTORY, ignoring tramp syntax."
   (shell-command-to-string
-   (format "printf '%%s' \"$(realpath --relative-to . \"%s\")\"" filepath)))
+   (format "printf '%%s' \"$(realpath --relative-to . \"%s\")\""
+           (tramp-file-local-name filepath))))
 
 (provide 'file-utils)
