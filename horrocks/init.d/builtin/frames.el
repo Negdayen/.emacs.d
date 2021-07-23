@@ -1,6 +1,6 @@
 (customize-setq
  default-frame-alist '((bottom-divider-width . 0)
-                       (font . "DejaVu Sans Mono-10")
+                       (font . "DejaVu Sans Mono-9")
                        (horizontal-scroll-bars . nil)
                        (left-fringe . 0)
                        (right-divider-width . 0)
