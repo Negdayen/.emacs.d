@@ -1,11 +1,17 @@
 (use-package org :pin org)
 
 (with-eval-after-load 'org
+
   (bind-key "C-c C-v '" 'org-edit-src-code org-mode-map)
-  ;; org-mode sets this to org-{backward,foward}-element, which I don't like.
+
+ ;; org-mode sets this to org-{backward,foward}-element, which I don't like.
   ;; Unbinding sets these to org-{backward,foward}-paragraph instead.
   (bind-key "M-{" nil org-mode-map)
   (bind-key "M-}" nil org-mode-map)
+
+  (bind-key "C-c I h" 'org-skeleton-header org-mode-map)
+  (bind-key "C-c I s" 'org-skeleton-src-block org-mode-map)
+  (bind-key "C-c I q" 'org-skeleton-quote-block org-mode-map)
 
   ;; Cycle lists like headings
   (setq org-cycle-include-plain-lists 'integrate)
