@@ -43,23 +43,22 @@
 (defconst horrocks-theme--org-level-7 (hue+ horrocks-theme--org-level-6 .125))
 (defconst horrocks-theme--org-level-8 (hue+ horrocks-theme--org-level-7 .125))
 
-(defconst horrocks-theme--rainbow-delimiters-depth-1-face (list 0 0 .2))
+(setq rainbow-delimiters-max-face-count 8)
+(defconst horrocks-theme--rainbow-delimiters-depth-1-face (list 0 .2 .5))
 (defconst horrocks-theme--rainbow-delimiters-depth-2-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-1-face .1))
+  (hue+ horrocks-theme--rainbow-delimiters-depth-1-face .125))
 (defconst horrocks-theme--rainbow-delimiters-depth-3-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-2-face .1))
+  (hue+ horrocks-theme--rainbow-delimiters-depth-2-face .125))
 (defconst horrocks-theme--rainbow-delimiters-depth-4-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-3-face .1))
+  (hue+ horrocks-theme--rainbow-delimiters-depth-3-face .125))
 (defconst horrocks-theme--rainbow-delimiters-depth-5-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-4-face .1))
+  (hue+ horrocks-theme--rainbow-delimiters-depth-4-face .125))
 (defconst horrocks-theme--rainbow-delimiters-depth-6-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-5-face .1))
+  (hue+ horrocks-theme--rainbow-delimiters-depth-5-face .125))
 (defconst horrocks-theme--rainbow-delimiters-depth-7-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-6-face .1))
+  (hue+ horrocks-theme--rainbow-delimiters-depth-6-face .125))
 (defconst horrocks-theme--rainbow-delimiters-depth-8-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-7-face .1))
-(defconst horrocks-theme--rainbow-delimiters-depth-9-face
-  (light+ horrocks-theme--rainbow-delimiters-depth-8-face .1))
+  (hue+ horrocks-theme--rainbow-delimiters-depth-7-face .125))
 
 (custom-theme-set-faces
  'horrocks
@@ -135,6 +134,7 @@
             (((type tty) (min-colors 256))
              (:background "brightyellow"))))
  '(isearch-fail ((t (:foreground "red"))))
+ `(ivy-current-match ((t (:background ,color--cerulean-blue :foreground "white"))))
  '(ivy-minibuffer-match-face-1 ((t (:inherit default))))
  '(ivy-minibuffer-match-face-2 ((t (:inherit default))))
  '(ivy-minibuffer-match-face-3 ((t (:inherit default))))
@@ -161,6 +161,7 @@
  '(org-block ((t (:inherit default))))
  '(org-block-begin-line ((t (:inherit org-meta-line))))
  '(org-block-end-line ((t (:inherit org-meta-line))))
+ '(org-code ((t (:inherit default))))
  '(org-document-info-keyword ((t (:inherit org-meta-line))))
  '(org-meta-line ((t (:foreground "magenta"))))
  `(org-level-1 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-1)))))
@@ -172,6 +173,7 @@
  `(org-level-7 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-7)))))
  `(org-level-8 ((t (:foreground ,(hsl-to-hex horrocks-theme--org-level-8)))))
  '(org-verbatim ((t (:foreground "silver"))))
+ '(persp-selected-face ((t (:foreground "seagreen"))))
  '(query-replace ((t (:inherit (isearch)))))
  `(rainbow-delimiters-depth-1-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-1-face)))))
  `(rainbow-delimiters-depth-2-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-2-face)))))
@@ -181,7 +183,6 @@
  `(rainbow-delimiters-depth-6-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-6-face)))))
  `(rainbow-delimiters-depth-7-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-7-face)))))
  `(rainbow-delimiters-depth-8-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-8-face)))))
- `(rainbow-delimiters-depth-9-face ((t (:foreground ,(hsl-to-hex horrocks-theme--rainbow-delimiters-depth-9-face)))))
  '(rainbow-delimiters-mismatched-face ((t (:inherit error))))
  '(rainbow-delimiters-unmatched-face ((t (:inherit error))))
  `(region ((t (:background ,color--deep-red))))
@@ -195,10 +196,10 @@
  `(show-paren-match ((t (:foreground ,color--purple :weight bold))))
  '(sp-pair-overlay-face ((t nil)))
  '(tooltip ((t (:foreground "black" :background "lightyellow"))))
- '(trailing-whitespace ((t (:background "white"))))
- '(whitespace-empty ((t (:background "ghostwhite"))))
- '(whitespace-line ((t (:background "grey8"))))
- '(whitespace-tab ((t (:foreground "tan"))))
+ '(trailing-whitespace ((t (:background "grey10"))))
+ '(whitespace-empty ((t (:background "grey10"))))
+ '(whitespace-line ((t (:background "grey10"))))
+ '(whitespace-tab ((t (:background "grey10" :foreground "tan"))))
  '(whitespace-trailing ((t (:inherit trailing-whitespace))))
  '(widget-field ((t
                   (:background "black"
