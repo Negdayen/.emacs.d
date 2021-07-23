@@ -12,8 +12,7 @@
                         (when (= 2 (length (frame-list)))
                           (with-selected-frame frame
                             (load-theme 'horrocks t))))))
- (t (add-hook 'window-setup-hook
-              (lambda () (load-theme 'horrocks t)))))
+ (t (add-hook 'window-setup-hook (lambda () (load-theme 'horrocks t)))))
 
 (load (relative "horrocks/lib/load-directory"))
 (load-directory (relative "horrocks/init.d/priority"))

@@ -43,8 +43,9 @@
   Movement: [ _k_ up] [_j_ down] [_h_ left] [_l_ right] [_o_ther window] [inverse _O_ther window]
     Layout: [_-_ split horizontally] [_|_ split vertically] [_d_elete window] [_D_elete other windows] [_u_ndo] [_r_edo]
     Buffer: [_n_ext] [_p_revious] [switch _b_uffer] [_f_ind file]
-    Resize: [_K_ up]  [_J_ down] [_H_ left] [_L_ right] [_B_alance]"
+    Resize: [_K_ up]  [_J_ down] [_H_ left] [_L_ right] [_B_alance]
 
+"
   ("k" windmove-up)
   ("j" windmove-down)
   ("h" windmove-left)
