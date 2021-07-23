@@ -25,6 +25,8 @@
 
               ;; Kill Ring
 
+              ("<C-M-backspace>" . sp-backward-kill-sexp)
+              ("C-M-h" . sp-backward-kill-sexp)
               ("C-M-k" . sp-kill-sexp)
               ("C-M-w" . sp-copy-sexp)
 
@@ -43,13 +45,6 @@
 
               ("C-]" . sp-select-next-thing-exchange)
               ("C-M-]" . sp-select-next-thing)
-
-              ;; Other
-
-              ("C-M-t" . sp-transpose-sexp)
-              ("M-s" . sp-split-sexp)
-              ("M-D" . sp-splice-sexp)
-              ("M-S" . sp-join-sexp)
               )
   :commands (smartparens-global-mode
              smartparens-mode
