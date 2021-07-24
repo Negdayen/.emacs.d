@@ -8,6 +8,8 @@
              scheme-smart-complete
              scheme-smart-indent-function))
 
+(add-to-list 'auto-mode-alist '("\\.sld$" . scheme-mode))
+
 (with-eval-after-load 'scheme
 
   (bind-key "C-c c" 'kebab-region scheme-mode-map)
