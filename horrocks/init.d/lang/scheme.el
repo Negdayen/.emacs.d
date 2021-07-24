@@ -1,5 +1,7 @@
 (require 'bind-key)
 
+(add-to-list 'font-lock-maximum-decoration '(scheme-mode . 1))
+
 (use-package scheme-complete
   :commands (scheme-complete-or-indent
              scheme-get-current-symbol-info
