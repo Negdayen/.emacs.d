@@ -55,12 +55,11 @@
   :config
   (sp-local-pair sp-lisp-modes "`" "`" :actions nil)
 
-  ;; (sp-with-modes '(html-mode sgml-mode) (sp-local-pair "<" ">"))
-  ;; (setq
-  ;;  sp-highlight-pair-overlay nil
-  ;;  sp-highlight-wrap-overlay nil
-  ;;  sp-highlight-wrap-tag-overlay nil)
-  )
+  (customize-setq
+   sp-highlight-pair-overlay nil
+   ;;sp-highlight-wrap-overlay
+   ;;sp-highlight-wrap-tag-overlay nil
+   ))
 
 (defun sp-backwards-top-level (arg)
   (interactive "p")
