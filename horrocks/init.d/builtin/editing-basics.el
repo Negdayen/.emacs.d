@@ -13,7 +13,7 @@
  ;; open-paren-in-column-0-is-defun-start
  ;; parse-sexp-ignore-comments
  read-quoted-char-radix 10
- require-final-newline 'sure-why-not
+ require-final-newline nil
  set-mark-command-repeat-pop t
  shift-select-mode nil
  ;; show-trailing-whitespace nil ;this is handled by whitespace-mode
