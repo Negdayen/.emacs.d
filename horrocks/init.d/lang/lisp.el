@@ -21,3 +21,5 @@
         (:open "(" :close ")" :actions (insert wrap autoskip navigate))
         (:open "[" :close "]" :actions (insert wrap autoskip navigate))
         (:open "{" :close "}" :actions (insert wrap autoskip navigate)))))))
+
+(bind-key "C-c SPC" 'kebab-region lisp-mode-shared-map)
