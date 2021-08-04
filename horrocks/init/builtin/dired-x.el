@@ -12,7 +12,7 @@
  ;; dired-guess-shell-znew-switches
  ;; dired-omit-case-fold
  ;; dired-omit-extensions
- ;; dired-omit-files
+ dired-omit-files (rx bol "." (not ".") (* anything) eol)
  ;; dired-omit-size-limit
  ;; dired-omit-verbose
  ;; dired-vm-read-only-folders
