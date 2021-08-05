@@ -5,4 +5,6 @@
 (customize-setq org-roam-directory "~/notes")
 
 (when (file-exists-p org-roam-directory)
-  (org-roam-setup))
+  (condition-case nil
+      (org-roam-setup)
+    (error (warn "org-roam-setup failed"))))
