@@ -25,9 +25,9 @@
   ""
   (dolist (hook '(emacs-lisp-mode-hook
                   lisp-interaction-mode-hook))
-    (dolist (func '(abbrev-mode
-                    elisp-x-define-abbrevs))
-      (add-hook hook func))))
+    (dolist (func '(abbrev-mode))
+      (add-hook hook func)))
+  (elisp-x-define-abbrevs))
 
 ;;
 
