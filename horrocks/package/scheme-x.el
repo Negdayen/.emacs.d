@@ -520,11 +520,12 @@
                   inferior-scheme-mode-hook))
     (dolist (func '(abbrev-mode
                     scheme-x-add-font-locks
-                    scheme-x-define-abbrevs
                     scheme-x-put-default-indent-values))
       (add-hook hook func)))
 
-  (add-hook 'scheme-mode-hook 'scheme-x-set-local-outline-regexp))
+  (add-hook 'scheme-mode-hook 'scheme-x-set-local-outline-regexp)
+
+  (scheme-x-define-abbrevs))
 
 ;;
 
