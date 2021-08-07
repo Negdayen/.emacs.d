@@ -80,7 +80,6 @@
     ("if"               0)
     ("import"           0)
     ("lambda"           1)
-    ("let"              1)
     ("let*"             1)
     ("let-syntax"       1)
     ("letrec"           1)
