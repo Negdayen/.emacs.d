@@ -4,5 +4,5 @@ Couldn't download anything from GNU archive.
 https://elpa.gnu.org/packages/gnu-elpa-keyring-update.html
 
 #+BEGIN_SRC sh
-gpg2 --homedir ~/.enacs.d/elpa/gnupg --receive-keys <key>
+gpg2 --homedir ~/.emacs.d/elpa/gnupg --receive-keys "${key_id}"
 #+END_SRC
