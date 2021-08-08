@@ -61,6 +61,21 @@
 
 (add-to-list 'interpreter-mode-alist '("\\(gambit-\\)?gs[ci].*" . gambit-scheme-mode))
 
+(defconst gambit-scheme-auto-mode
+  '("\\(\\.scm\\|\\.sld\\|\\.ss\\)$" . gambit-scheme-mode))
+
+(defun gambit-scheme-enable-auto-mode ()
+  (interactive)
+  (setq auto-mode-alist
+        (cons gambit-scheme-auto-mode
+              (if (member gambit-scheme-auto-mode auto-mode-alist)
+                  (remove gambit-scheme-auto-mode auto-mode-alist)
+                auto-mode-alist))))
+
+(defun gambit-scheme-disable-auto-mode ()
+  (interactive)
+  (setq auto-mode-alist (remove gambit-scheme-auto-mode auto-mode-alist)))
+
 ;;,-------------------------------
 ;;| compilation mode error regexps
 ;;`-------------------------------
