@@ -1,3 +1,5 @@
+(use-package pyvenv)
+
 (add-to-list 'auto-mode-alist
              '("\\(^[Ss]conscript$\\|^[Ss]construct$\\|^SCsub$\\)" . python-mode))
 
