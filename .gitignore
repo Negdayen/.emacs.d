@@ -1,8 +1,11 @@
 .org-id-locations
 amx-items
-auto-save/
 auto-save-list/
+auto-save/
 backup/
+bookmarks
 customize.el
 elpa/
 org-roam.db
+tramp
+transient/
