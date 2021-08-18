@@ -21,4 +21,18 @@
   >  _ \n
   > "#+END_QUOTE" \n)
 
+;;;;;;;;;;;;;;;;;;;;;;;
+;; Custom Link Types ;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+(org-link-set-parameters
+ "man"
+ :follow
+ (lambda (link)
+   (let ((tokens (s-split "::" link)))
+     (woman (car tokens))
+     (when (> (length tokens) 1)
+       (re-search-forward (cadr tokens))
+       (recenter-top-bottom)))))
+
 (provide 'org-x)
