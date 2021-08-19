@@ -52,6 +52,8 @@
 
    ([?\s-x] . (lambda () (interactive) (shell-command "dmenu_run")))
 
+   ([?\s-y] . (lambda () (interactive) (shell-command "clipmenu")))
+
    ([?\s-d ?\s-i] . (lambda ()
                       "Display inverted colors."
                       (interactive)
