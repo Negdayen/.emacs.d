@@ -10,9 +10,7 @@
   (bind-key "M-}" nil org-mode-map)
 
   (bind-key "C-c I h" 'org-skeleton-header org-mode-map)
-  (bind-key "C-c I s" 'org-skeleton-src-block org-mode-map)
-  (bind-key "C-c I q" 'org-skeleton-quote-block org-mode-map)
-
+  
   ;; Cycle lists like headings
   (setq org-cycle-include-plain-lists 'integrate)
 
