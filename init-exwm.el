@@ -16,21 +16,38 @@
 
 (customize-setq
  exwm-input-global-keys
- `(([?\s-r] . exwm-reset) ;super-r to exit char-mode and fullscreen-mode.
-   ([?\s-w] . exwm-workspace-switch)
-   ([?\s-x] . (lambda () (interactive) (shell-command "dmenu_run")))
+ `(([print] . (lambda ()
+                "Screenshot a selected rectangle and store it in ~/screenshots/"
+                (interactive)
+                (shell-command
+                 "sh -c 'mkdir -p ~/screenshots && scrot -f -s -z ~/screenshots/$(date -Iseconds).png'"
+                 nil
+                 nil)))
+   ([s-print] . (lambda ()
+                  "Screenshot the entire screen and store it in ~/screenshots/"
+                  (interactive)
+                  (shell-command
+                   "sh -c 'mkdir -p ~/screenshots && scrot -z ~/screenshots/$(date -Iseconds).png'"
+                   nil
+                   nil)))
 
    ([s-return] . (lambda ()
                    (interactive)
                    (start-process-shell-command "st" nil "st")))
 
-   ([?\s-Z] . (lambda () (interactive) (shell-command "sudo ZZZ")))
+   ([?\s-K] . kill-buffer-and-window)
 
+   ([?\s-r] . exwm-reset)
+
+   ([?\s-w] . exwm-workspace-switch)
+
+   ([?\s-x] . (lambda () (interactive) (shell-command "dmenu_run")))
 
    ([?\s-d ?\s-i] . (lambda ()
-                      "Invert X display's colors"
+                      "Display inverted colors."
                       (interactive)
                       (shell-command "xcalib -i -a")))
+
    ([?\s-d ?\s-t] . (lambda ()
                       "Display current time and date."
                       (interactive)
