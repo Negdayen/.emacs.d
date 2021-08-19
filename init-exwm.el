@@ -18,7 +18,10 @@
 
 (customize-setq
  exwm-input-global-keys
- `(([print] . (lambda ()
+ `(
+   ([s-f11] . exwm-layout-toggle-fullscreen)
+
+   ([print] . (lambda ()
                 "Screenshot a selected rectangle and store it in ~/screenshots/"
                 (interactive)
                 (shell-command
@@ -37,7 +40,11 @@
                    (interactive)
                    (start-process-shell-command "st" nil "st")))
 
+   ([?\s-F] . exwm-floating-toggle-floating)
+
    ([?\s-K] . kill-buffer-and-window)
+
+   ([?\s-M] . exwm-workspace-move-window)
 
    ([?\s-r] . exwm-reset)
 
@@ -66,7 +73,8 @@
    ;;super-& launches runs programs without an async shell command buffer
    ([?\s-&] . (lambda (command)
                 (interactive (list (read-shell-command "$ ")))
-                (start-process-shell-command command nil command)))))
+                (start-process-shell-command command nil command)))
+))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Line-mode Key Bindings ;;
