@@ -8,6 +8,8 @@
 
 (customize-setq exwm-workspace-number 10)
 
+(customize-setq exwm-manage-force-tiling t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Global Key Bindings ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
