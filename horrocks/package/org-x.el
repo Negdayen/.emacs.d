@@ -21,4 +21,17 @@
        (re-search-forward (cadr tokens))
        (recenter-top-bottom)))))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Org Table Additions ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun org-table-field-copy-above ()
+  "Copies the field from the previous row to the current field."
+  (interactive)
+  (org-table-blank-field)
+  (insert (save-excursion
+            (previous-line)
+            (org-table-get-field)))
+  (org-table-align))
+
 (provide 'org-x)
