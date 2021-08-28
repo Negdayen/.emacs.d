@@ -34,4 +34,9 @@
             (org-table-get-field)))
   (org-table-align))
 
+(defun org-attach-open-dir ()
+  "Open the org attachment directory for the current org node."
+  (interactive)
+  (find-file (org-attach-dir)))
+
 (provide 'org-x)
