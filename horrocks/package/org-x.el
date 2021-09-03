@@ -37,6 +37,7 @@
 (defun org-attach-open-dir ()
   "Open the org attachment directory for the current org node."
   (interactive)
+  (require 'org-attach)
   (find-file (org-attach-dir)))
 
 (provide 'org-x)
