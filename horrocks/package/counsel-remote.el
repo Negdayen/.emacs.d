@@ -9,16 +9,16 @@
   (interactive)
   (ivy-read
    "SSH into: "
-   (/etc/hosts)
+   (find-hosts)
    :action (lambda (host) (tramp-shell (format "/sshx:%s:/home/" host)))
    :sort t))
 
 (defun counsel-tramp-root-shell ()
-  "`tramp-root-shell` with a host from /etc/hosts."
+  "`tramp-root-shell` with a host from find-hosts."
   (interactive)
   (ivy-read
    "SSH into: "
-   (/etc/hosts)
+   (find-hosts)
    :action 'tramp-root-shell
    :sort t))
 
@@ -37,11 +37,11 @@
 ;===============================================================================
 
 (defun counsel-rdc ()
-  "RDC into a host from /etc/hosts"
+  "RDC into a host from find-hosts"
   (interactive)
   (ivy-read
    "RDC into: "
-   (/etc/hosts)
+   (find-hosts)
    :action 'rdc
    :sort t))
 
@@ -53,11 +53,11 @@
 ;===============================================================================
 
 (defun counsel-host-term ()
-  "`remote-host-term` into a host from /etc/hosts."
+  "`remote-host-term` into a host from find-hosts."
   (interactive)
   (ivy-read
    "SSH into: "
-   (/etc/hosts)
+   (find-hosts)
    :action 'remote-term
    :sort t))
 
@@ -73,9 +73,18 @@
 ;                           Helper Functions
 ;===============================================================================
 
+(defun find-hosts ()
+  "Return list of hosts from various sources."
+  (append (/etc/hosts)
+          (ssh-hosts)))
+
 (defun /etc/hosts ()
   "Return list of IP addresses and hostnames in /etc/hosts."
   (shell-command-to-list "grep -v '^#' /etc/hosts | tr '[:blank:]' '\n'"))
+
+(defun ssh-hosts ()
+  "Return list of Hosts defined in ~/.ssh/config"
+  (shell-command-to-list "awk '/^Host/ {print $2}' ~/.ssh/config"))
 
 ;==============================================================================
 ;                          Probably Worthless
