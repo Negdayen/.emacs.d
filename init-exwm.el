@@ -6,9 +6,15 @@
 
 
 
-(customize-setq exwm-workspace-number 10)
+(customize-setq
+ exwm-workspace-number 10
+ exwm-workspace-show-all-buffers t
+ ;; exwm-workspace-warp-cursor nil
+)
 
-(customize-setq exwm-manage-force-tiling t)
+(customize-setq
+ exwm-manage-force-tiling nil
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Global Key Bindings ;;

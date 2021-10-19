@@ -4,12 +4,18 @@
 ;; screen. That behavior is far too jumpy for my taste.
 
 (customize-setq
- ;; display-buffer-alist
+ display-buffer-alist '(("^Dialog\\|^DialogWindow"
+                         (display-buffer-in-side-window)
+                         (side . bottom)
+                         (slot . 1))
+                        ("^Panda\\|^Universal Tournament"
+                         (display-buffer-reuse-window
+                          display-buffer-in-previous-window
+                          display-buffer-in-direction)
+                         (direction . right)))
  display-buffer-base-action (cons (list #'display-buffer-reuse-window
                                         #'display-buffer-same-window)
                                   (list))
- ;; display-buffer-function
- ;; display-buffer-reuse-frames
  ;; even-window-sizes
  ;; frame-auto-hide-function
  hscroll-margin 3
@@ -45,8 +51,8 @@
  ;; window-adjust-process-window-size-function
  ;; window-combination-limit
  ;; window-combination-resize
- ;; window-min-height
- ;; window-min-width
+ window-min-height 17
+ window-min-width 68
  ;; window-resize-pixelwise
  ;; window-sides-reversed
  ;; window-sides-slots
