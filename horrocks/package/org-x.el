@@ -21,6 +21,13 @@
        (re-search-forward (cadr tokens))
        (recenter-top-bottom)))))
 
+(org-link-set-parameters
+ "notmuch"
+ :follow
+ (lambda (link)
+   (let ((thread-id link))
+     (notmuch-show thread-id))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org Table Additions ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
